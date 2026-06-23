@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>document.documentElement.classList.add('js');</script>
-  <title>Angebot anfordern | MHR Facility</title>
-  <meta name="description" content="Sagen Sie uns kurz, worum es geht — wir melden uns binnen 24 Stunden mit einem Vorschlag." />
-  <link rel="canonical" href="https://www.mhr-facility.de/" />
+  <title>Kontakt & Angebot – Gebäudereinigung Hamburg | MHR Facility</title>
+  <meta name="description" content="Angebot für Gebäudereinigung in Hamburg anfordern. MHR Facility meldet sich binnen 24 Stunden. Telefon, E-Mail und Anfrageformular." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.mhr-facility.de/kontakt.html" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +19,7 @@
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="index.html" aria-label="MHR Facility — Startseite">
+      <a class="brand" href="index.html" aria-label="MHR Facility, Startseite">
         <img src="assets/logo/mhr-logo-white.png" alt="MHR Facility" class="brand-logo" />
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü öffnen">
@@ -40,40 +41,54 @@
       <div class="container page-header__inner">
         <p class="eyebrow eyebrow--on-dark"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span> Kontakt</p>
         <h1 id="page-title">Angebot anfordern</h1>
-        <p class="page-header__sub">Sagen Sie uns kurz, worum es geht — wir melden uns binnen 24 Stunden mit einem Vorschlag.</p>
+        <p class="page-header__sub">Sagen Sie uns kurz, worum es geht. Wir melden uns binnen 24 Stunden mit einem Vorschlag.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <form class="form" action="#" method="post" novalidate>
-          <p class="form__hint" style="margin-bottom:22px">Felder mit <span class="req">*</span> sind erforderlich. Antwort binnen 24 Stunden.</p>
-          <div class="form__row form__row--split">
-            <div><label for="f-name">Name <span class="req">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" required /></div>
-            <div><label for="f-firma">Firma</label><input id="f-firma" name="firma" type="text" autocomplete="organization" /></div>
+      <div class="container two-col">
+        <div class="reveal">
+          <div class="prose">
+            <p>Sagen Sie uns kurz, worum es geht: Objektart, ungefähre Fläche und gewünschtes Intervall. Wir melden uns <strong>binnen 24 Stunden</strong> mit einem Vorschlag.</p>
           </div>
-          <div class="form__row form__row--split">
-            <div><label for="f-mail">E-Mail <span class="req">*</span></label><input id="f-mail" name="email" type="email" autocomplete="email" required /></div>
-            <div><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" /></div>
-          </div>
-          <div class="form__row">
-            <label for="f-objekt">Objektart</label>
-            <select id="f-objekt" name="objektart">
-              <option value="">Bitte wählen …</option>
-              <option>Gastronomie / HACCP</option>
-              <option>Treppenhaus / Hausverwaltung</option>
-              <option>Büro / Gewerbe</option>
-              <option>Glas- / Bauschlussreinigung</option>
-              <option>Sonstiges</option>
-            </select>
-          </div>
-          <div class="form__row">
-            <label for="f-msg">Ihre Nachricht</label>
-            <textarea id="f-msg" name="nachricht" placeholder="Kurz zu Objekt, Fläche und gewünschtem Intervall."></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary">Angebot anfordern <span class="arrow" aria-hidden="true">→</span></button>
-          <p class="form__hint" style="margin-top:14px">Hinweis: Formular-Versand wird im nächsten Schritt angebunden (z. B. Web3Forms).</p>
-        </form>
+          <ul class="checklist" style="margin-top:24px">
+            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> <span><strong>Telefon:</strong> <a href="tel:+4917672181941">0176 72181941</a></span></li>
+            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> <span><strong>E-Mail:</strong> <a href="mailto:facility.mhr@gmail.com">facility.mhr@gmail.com</a></span></li>
+            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> <span><strong>Gebiet:</strong> Hamburg und Umland</span></li>
+            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> <span><strong>Antwort:</strong> binnen 24 Stunden</span></li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <form class="form" action="#" method="post" novalidate>
+            <div class="form__row form__row--split">
+              <div><label for="f-name">Name <span class="req">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" required /></div>
+              <div><label for="f-firma">Firma</label><input id="f-firma" name="firma" type="text" autocomplete="organization" /></div>
+            </div>
+            <div class="form__row form__row--split">
+              <div><label for="f-mail">E-Mail <span class="req">*</span></label><input id="f-mail" name="email" type="email" autocomplete="email" required /></div>
+              <div><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" /></div>
+            </div>
+            <div class="form__row">
+              <label for="f-objekt">Objektart</label>
+              <select id="f-objekt" name="objektart">
+                <option value="">Bitte wählen …</option>
+                <option>Gastronomie / HACCP</option>
+                <option>Treppenhaus / Hausverwaltung</option>
+                <option>Büro / Gewerbe</option>
+                <option>Glas- / Fensterreinigung</option>
+                <option>Bauendreinigung</option>
+                <option>Grund- / Sonderreinigung</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+            <div class="form__row">
+              <label for="f-msg">Ihre Nachricht</label>
+              <textarea id="f-msg" name="nachricht" placeholder="Kurz zu Objekt, Fläche und gewünschtem Intervall."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Angebot anfordern <span class="arrow" aria-hidden="true">→</span></button>
+            <p class="form__hint" style="margin-top:14px">Felder mit <span class="req">*</span> sind erforderlich. Der Versand wird im nächsten Schritt angebunden (Web3Forms).</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -83,26 +98,27 @@
     <div class="container">
       <div class="site-footer__top">
         <div class="site-footer__brandcol">
-          <a class="brand" href="index.html" aria-label="MHR Facility — Startseite">
+          <a class="brand" href="index.html" aria-label="MHR Facility, Startseite">
             <img src="assets/logo/mhr-logo-white.png" alt="MHR Facility" class="brand-logo" />
           </a>
-          <p class="site-footer__claim">Reinigung mit System. B2B-Gebäudereinigung für Hamburg &amp; Umland.</p>
+          <p class="site-footer__claim">Reinigung mit System. B2B-Gebäudereinigung für Hamburg und Umland.</p>
         </div>
         <div>
           <h2>Leistungen</h2>
           <ul>
-            <li><a href="leistungen.html">Unterhaltsreinigung</a></li>
+            <li><a href="leistungen.html#unterhaltsreinigung">Unterhaltsreinigung</a></li>
             <li><a href="treppenhausreinigung.html">Treppenhausreinigung</a></li>
             <li><a href="gastronomiereinigung.html">Gastronomiereinigung</a></li>
-            <li><a href="leistungen.html">Glas- &amp; Büroreinigung</a></li>
+            <li><a href="leistungen.html#glasreinigung">Glas- &amp; Fensterreinigung</a></li>
+            <li><a href="leistungen.html#bauendreinigung">Bauendreinigung</a></li>
+            <li><a href="leistungen.html#grundreinigung">Grund- &amp; Sonderreinigung</a></li>
           </ul>
         </div>
         <div>
           <h2>Unternehmen</h2>
           <ul>
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="gastronomiereinigung.html">Für Gastronomie</a></li>
-            <li><a href="treppenhausreinigung.html">Für Hausverwaltung</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
         </div>
@@ -110,8 +126,9 @@
           <h2>Kontakt</h2>
           <ul>
             <li>Hamburg &amp; Umland</li>
+            <li><a href="tel:+4917672181941">0176 72181941</a></li>
+            <li><a href="mailto:facility.mhr@gmail.com">facility.mhr@gmail.com</a></li>
             <li><a href="kontakt.html">Angebot anfordern</a></li>
-            <li>Antwort binnen 24 Stunden</li>
           </ul>
         </div>
       </div>
