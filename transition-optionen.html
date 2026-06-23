@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MHR Facility — Übergangs-Varianten (Vergleich)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    body { background: var(--grey); }
+
+    .cmp-label {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--white); border-bottom: 1px solid var(--line);
+      padding: 18px clamp(20px, 5vw, 64px);
+    }
+    .cmp-label .tag {
+      display: inline-block; font-family: 'Sora', sans-serif; font-weight: 700;
+      font-size: 12px; letter-spacing: .5px; color: var(--white);
+      background: var(--cyan-deep); padding: 4px 11px; border-radius: 4px; margin-bottom: 6px;
+    }
+    .cmp-label h2 { font-family: 'Sora', sans-serif; font-size: 19px; color: var(--anthracite); }
+    .cmp-label p { font-size: 13.5px; color: var(--ink-soft); margin-top: 2px; max-width: 760px; }
+
+    /* gemeinsame Demo-Panels */
+    .p { padding: clamp(48px, 7vw, 84px) 0; }
+    .p .inner { max-width: var(--container); margin-inline: auto; padding-inline: clamp(20px, 5vw, 64px); }
+    .p--dark { background: var(--anthracite); color: #fff; }
+    .p--dark h3 { color: #fff; }
+    .p--light { background: var(--white); }
+    .p--grey { background: var(--grey); }
+    .p h3 { font-family: 'Sora', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 27px); letter-spacing: -.3px; }
+    .p .eyebrow { margin-bottom: 12px; }
+    .p .lead { margin-top: 10px; max-width: 560px; color: var(--ink-soft); }
+    .p--dark .lead { color: rgba(255,255,255,.74); }
+
+    /* ============ Variante 1 — Gestapelte Panels (rounded sheets) ============ */
+    .v1 .p { position: relative; }
+    .v1 .p + .p { margin-top: clamp(-44px, -4vw, -28px); border-radius: 34px 34px 0 0; z-index: 2; }
+    .v1 .p:nth-child(3) { z-index: 3; }
+    .v1 .p:nth-child(4) { z-index: 4; }
+
+    /* ============ Variante 2 — Brücken-Karte über der Naht ============ */
+    .v2 .bridge {
+      max-width: 940px; margin: -56px auto -56px; position: relative; z-index: 5;
+      background: var(--white); border: 1px solid var(--line); border-radius: 16px;
+      box-shadow: 0 24px 60px rgba(26,31,43,.20);
+      padding: 26px 30px; display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
+    }
+    .v2 .bridge .stat strong { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 26px; color: var(--anthracite); display:block; }
+    .v2 .bridge .stat span { font-size: 13px; color: var(--ink-soft); }
+    .v2 .bridge .bar { width: 32px; height: 4px; background: var(--cyan); transform: skewX(-18deg); margin-bottom: 12px; }
+    @media (max-width: 620px){ .v2 .bridge { grid-template-columns: 1fr; gap: 16px; } }
+
+    /* ============ Variante 3 — Erhöhte Kante (Schatten, keine Linie) ============ */
+    .v3 .p--light { position: relative; z-index: 2; box-shadow: 0 -20px 44px rgba(26,31,43,.16); }
+    .v3 .p--dark + .p--light { border-radius: 22px 22px 0 0; }
+
+    .note { padding: 40px clamp(20px,5vw,64px) 80px; text-align:center; color: var(--ink-soft); font-size: 14px; }
+    .eyebrow .bars span { } /* von styles.css */
+  </style>
+</head>
+<body>
+
+  <!-- ============================ VARIANTE 1 ============================ -->
+  <div class="cmp-label">
+    <span class="tag">VARIANTE 1</span>
+    <h2>Gestapelte Panels (abgerundete Flächen)</h2>
+    <p>Sektionen stapeln sich wie Blätter übereinander: abgerundete Oberkanten + leichte Überlappung. Sehr zeitgemäß (Linear/Vercel-Stil), ruhig, technisch-sauber — passt zu „System".</p>
+  </div>
+  <div class="v1">
+    <section class="p p--dark"><div class="inner">
+      <p class="eyebrow eyebrow--on-dark"><span class="bars"><span></span><span></span><span></span></span> Warum MHR</p>
+      <h3>Sie kaufen kein Putzen. Sie kaufen Gewissheit.</h3>
+      <p class="lead">Feste Teams, klare Prozesse, dokumentierte Qualität.</p>
+    </div></section>
+    <section class="p p--light"><div class="inner">
+      <p class="eyebrow eyebrow--on-light"><span class="bars"><span></span><span></span><span></span></span> Leistungen</p>
+      <h3>Gebäudereinigung mit System</h3>
+      <p class="lead">Unterhalts-, Treppenhaus- und HACCP-Reinigung für Hamburg &amp; Umland.</p>
+    </div></section>
+    <section class="p p--dark"><div class="inner">
+      <p class="eyebrow eyebrow--on-dark"><span class="bars"><span></span><span></span><span></span></span> Kundenportal</p>
+      <h3>Sie sehen jederzeit, dass alles erledigt ist.</h3>
+    </div></section>
+  </div>
+
+  <!-- ============================ VARIANTE 2 ============================ -->
+  <div class="cmp-label">
+    <span class="tag">VARIANTE 2</span>
+    <h2>Brücken-Karte über der Naht</h2>
+    <p>Eine schwebende Karte überbrückt den Übergang dunkel→hell und schafft bewusste Tiefe. Trägt zusätzlich Inhalt (z. B. Kennzahlen/Vertrauen). Der Übergang wird zum gestalteten Moment statt einer Kante.</p>
+  </div>
+  <div class="v2">
+    <section class="p p--dark"><div class="inner">
+      <p class="eyebrow eyebrow--on-dark"><span class="bars"><span></span><span></span><span></span></span> Warum MHR</p>
+      <h3>Sie kaufen kein Putzen. Sie kaufen Gewissheit.</h3>
+      <p class="lead">Feste Teams, klare Prozesse, dokumentierte Qualität.</p>
+    </div></section>
+    <div class="bridge">
+      <div class="stat"><span class="bar"></span><strong>24 h</strong><span>Antwortzeit zugesichert</span></div>
+      <div class="stat"><span class="bar"></span><strong>1</strong><span>fester Ansprechpartner</span></div>
+      <div class="stat"><span class="bar"></span><strong>100 %</strong><span>dokumentierte Leistung</span></div>
+    </div>
+    <section class="p p--light"><div class="inner">
+      <p class="eyebrow eyebrow--on-light"><span class="bars"><span></span><span></span><span></span></span> Leistungen</p>
+      <h3>Gebäudereinigung mit System</h3>
+      <p class="lead">Unterhalts-, Treppenhaus- und HACCP-Reinigung für Hamburg &amp; Umland.</p>
+    </div></section>
+  </div>
+
+  <!-- ============================ VARIANTE 3 ============================ -->
+  <div class="cmp-label">
+    <span class="tag">VARIANTE 3</span>
+    <h2>Erhöhte Kante (Schatten statt Linie)</h2>
+    <p>Die helle Fläche liegt als erhöhtes Panel leicht über der dunklen — Trennung durch weichen Schatten, kein Strich, kein Verlauf. Minimal und seriös, sehr dezent.</p>
+  </div>
+  <div class="v3">
+    <section class="p p--dark"><div class="inner">
+      <p class="eyebrow eyebrow--on-dark"><span class="bars"><span></span><span></span><span></span></span> Warum MHR</p>
+      <h3>Sie kaufen kein Putzen. Sie kaufen Gewissheit.</h3>
+      <p class="lead">Feste Teams, klare Prozesse, dokumentierte Qualität.</p>
+    </div></section>
+    <section class="p p--light"><div class="inner">
+      <p class="eyebrow eyebrow--on-light"><span class="bars"><span></span><span></span><span></span></span> Leistungen</p>
+      <h3>Gebäudereinigung mit System</h3>
+      <p class="lead">Unterhalts-, Treppenhaus- und HACCP-Reinigung für Hamburg &amp; Umland.</p>
+    </div></section>
+    <section class="p p--dark"><div class="inner">
+      <p class="eyebrow eyebrow--on-dark"><span class="bars"><span></span><span></span><span></span></span> Kundenportal</p>
+      <h3>Sie sehen jederzeit, dass alles erledigt ist.</h3>
+    </div></section>
+  </div>
+
+  <p class="note">Vergleich — drei zeitgemäße Übergangs-Varianten im MHR-Brand. Sagen Sie mir die Nummer, dann setze ich sie auf der ganzen Seite um.</p>
+
+</body>
+</html>
