@@ -312,7 +312,7 @@ a { color: var(--cyan-text); text-decoration: none; }
   position: absolute; top: -20%; right: -10%; width: 45%; height: 140%;
   background: rgba(0, 194, 199, 0.07); transform: skewX(var(--skew)); pointer-events: none;
 }
-.page-header__inner { position: relative; z-index: 2; padding-block: clamp(48px, 6vw, 80px); }
+.page-header__inner { position: relative; z-index: 2; padding-block: clamp(64px, 8vw, 104px); }
 .page-header .eyebrow { margin-bottom: 18px; }
 .page-header h1 {
   color: var(--white); font-weight: 700; letter-spacing: -0.5px;
@@ -322,13 +322,13 @@ a { color: var(--cyan-text); text-decoration: none; }
 .page-header__sub { color: rgba(255,255,255,0.78); max-width: 600px; margin-top: 16px; }
 
 /* ------------------------------ Sektionen ------------------------------ */
-.section { padding-block: clamp(48px, 7vw, 88px); }
+.section { padding-block: clamp(72px, 9vw, 120px); }
 .section--grey { background: var(--grey); }
 .section--dark { background: var(--anthracite); color: var(--white); }
-.section__eyebrow { margin-bottom: 14px; }
-.section__title { font-weight: 700; font-size: clamp(25px, 3.2vw, 28px); letter-spacing: -0.3px; }
+.section__eyebrow { margin-bottom: 16px; }
+.section__title { font-weight: 700; font-size: clamp(25px, 3.2vw, 28px); line-height: 1.2; letter-spacing: -0.3px; }
 .section--dark .section__title { color: var(--white); }
-.section__lead { color: var(--ink-soft); max-width: 620px; margin-top: 12px; }
+.section__lead { color: var(--ink-soft); font-size: 17px; line-height: 1.65; max-width: 620px; margin-top: 16px; }
 .section--dark .section__lead { color: rgba(255,255,255,0.78); }
 
 /* Fließtext-Links im Inhalt: unterstrichen (nicht nur über Farbe erkennbar) */
@@ -419,8 +419,8 @@ a { color: var(--cyan-text); text-decoration: none; }
 .site-footer .brand-logo { height: 36px; }
 
 /* ------------------------------ Layout-Helfer ------------------------------ */
-.grid { display: grid; gap: 22px; }
-.section__head { max-width: 720px; margin-bottom: 36px; }
+.grid { display: grid; gap: clamp(20px, 2.4vw, 28px); }
+.section__head { max-width: 720px; margin-bottom: clamp(40px, 5vw, 56px); }
 .section--center .section__head { margin-inline: auto; text-align: center; }
 .section--center .section__head .eyebrow { justify-content: center; }
 
