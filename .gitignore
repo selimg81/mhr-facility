@@ -1,0 +1,17 @@
+# Abhängigkeiten / Build
+node_modules/
+dist/
+.cache/
+
+# Betriebssystem / Editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Umgebungs-/Geheimdaten
+.env
+.env.*
+
+# Lokale Skill-Installationen (projektlokal, nicht versionieren)
+.claude/skills/
+.agents/

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MHR Facility">
+  <!-- Platzhalter-Favicon: Schrägen-Motiv (drei aufsteigende Balken, dritter in Cyan).
+       Später durch das finale Logo ersetzen. -->
+  <rect width="64" height="64" rx="12" fill="#1A1F2B"/>
+  <g transform="skewX(-18)">
+    <rect x="20" y="34" width="7" height="14" rx="1.5" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="31" y="26" width="7" height="22" rx="1.5" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="42" y="18" width="7" height="30" rx="1.5" fill="#00C2C7"/>
+  </g>
+</svg>
