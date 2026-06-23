@@ -453,6 +453,7 @@ a { color: var(--cyan-text); text-decoration: none; }
 .service-card .ico { stroke: var(--cyan-deep); margin-bottom: 14px; }
 .service-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
 .service-card p { font-size: 14px; color: var(--ink-soft); }
+a.service-card { color: var(--anthracite); display: block; }
 
 /* ------------------------------ Zielgruppen-Karten ------------------------------ */
 .target-grid { grid-template-columns: 1fr 1fr; }
