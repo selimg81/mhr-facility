@@ -250,14 +250,14 @@ a { color: var(--cyan-text); text-decoration: none; }
 /* ------------------------------ Hero (Variante A) ------------------------------ */
 .hero { position: relative; background: var(--anthracite); overflow: hidden; }
 .hero__skew,
-.hero__skew2 { position: absolute; pointer-events: none; transform: skewX(var(--skew)); }
+.hero__skew2 { position: absolute; pointer-events: none; transform: translate(var(--px, 0px), var(--py, 0px)) skewX(var(--skew)); will-change: transform; }
 .hero__skew {
   top: -10%; right: -12%; width: 60%; height: 130%;
   background: linear-gradient(135deg, rgba(0, 194, 199, 0.10), rgba(0, 194, 199, 0));
 }
 .hero__skew2 {
   bottom: -20%; left: -8%; width: 38%; height: 90%;
-  background: rgba(127, 227, 230, 0.04);
+  background: rgba(127, 227, 230, 0.06);
 }
 .hero__inner {
   position: relative; z-index: 2; text-align: center;
@@ -310,7 +310,7 @@ a { color: var(--cyan-text); text-decoration: none; }
 .page-header { position: relative; background: var(--anthracite); overflow: hidden; }
 .page-header__skew {
   position: absolute; top: -20%; right: -10%; width: 45%; height: 140%;
-  background: rgba(0, 194, 199, 0.07); transform: skewX(var(--skew)); pointer-events: none;
+  background: rgba(0, 194, 199, 0.07); transform: translate(var(--px, 0px), 0) skewX(var(--skew)); will-change: transform; pointer-events: none;
 }
 .page-header__inner { position: relative; z-index: 2; padding-block: clamp(64px, 8vw, 104px); }
 .page-header .eyebrow { margin-bottom: 18px; }
@@ -433,7 +433,7 @@ a { color: var(--cyan-text); text-decoration: none; }
 .value-grid { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 900px) { .value-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .value-grid { grid-template-columns: 1fr; } }
-.value-card { padding: 4px; }
+.value-card { padding: 4px; transition: transform .2s ease; transform-style: preserve-3d; }
 .value-card .ico { margin-bottom: 14px; stroke: var(--cyan); }
 .value-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--white); }
 .value-card p { font-size: 14px; color: rgba(255,255,255,0.72); }
@@ -501,7 +501,7 @@ a { color: var(--cyan-text); text-decoration: none; }
 
 /* ------------------------------ CTA-Band ------------------------------ */
 .cta-band { background: var(--anthracite); position: relative; overflow: hidden; }
-.cta-band__skew { position: absolute; inset: 0 -20% 0 auto; width: 40%; background: rgba(0,194,199,0.07); transform: skewX(var(--skew)); pointer-events: none; }
+.cta-band__skew { position: absolute; inset: 0 -20% 0 auto; width: 40%; background: rgba(0,194,199,0.07); transform: translate(var(--px, 0px), 0) skewX(var(--skew)); will-change: transform; pointer-events: none; }
 .cta-band__inner { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; padding-block: clamp(40px, 5vw, 64px); }
 .cta-band h2 { color: var(--white); font-size: clamp(24px, 3vw, 30px); max-width: 620px; }
 .cta-band h2 .accent { color: var(--cyan); }
@@ -636,6 +636,8 @@ a { color: var(--cyan-text); text-decoration: none; }
   content: ""; position: absolute; left: 18px; bottom: 18px;
   width: 34px; height: 5px; background: var(--cyan); transform: skewX(var(--skew));
 }
+/* Parallax: Bildflächen laufen sanft mit */
+.media-ph { transform: translateY(var(--py, 0px)); will-change: transform; }
 
 /* Bild/Text-Spalten tauschen */
 @media (min-width: 821px) {
